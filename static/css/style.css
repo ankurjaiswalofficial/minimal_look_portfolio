@@ -102,7 +102,7 @@ body main .user_card_section .user_card .card_image img {
   max-width: 16rem;
   height: auto;
   border-radius: var(--site-effective-border-radius);
-  background: grey;
+  background: transparent;
 }
 body main .user_card_section .user_card .card_topic {
   font-size: 1.8rem;
