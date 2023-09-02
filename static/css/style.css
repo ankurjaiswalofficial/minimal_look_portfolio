@@ -1,0 +1,643 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --body-bg: rgb(31, 31, 31);
+  --body-default-fg: #999999;
+  --body--larger-font-size: 3.3rem;
+  --user-card-button-fg: #000;
+  --site-effective-color: #28e98c;
+  --site-effective-border-radius: 2rem;
+  --container-header-font-size: 0.85rem;
+  font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--body-default-fg);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: var(--body-bg);
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+body main .user_card_section {
+  width: 100%;
+  flex-shrink: 3;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+}
+body main .user_card_section .user_card {
+  width: 100%;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: 0.1em solid var(--body-default-fg);
+  border-radius: var(--site-effective-border-radius);
+}
+body main .user_card_section .user_card * {
+  transition: 0.2s ease-out;
+}
+body main .user_card_section .user_card .card_header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+body main .user_card_section .user_card .card_header .branding svg {
+  width: 8rem;
+  height: auto;
+}
+body main .user_card_section .user_card .card_header .branding svg * {
+  fill: #fff;
+}
+body main .user_card_section .user_card .card_header .self_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+body main .user_card_section .user_card .card_header .self_description span {
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 300;
+}
+body main .user_card_section .user_card .card_image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+body main .user_card_section .user_card .card_image img {
+  width: 100%;
+  max-width: 16rem;
+  height: auto;
+  border-radius: var(--site-effective-border-radius);
+  background: grey;
+}
+body main .user_card_section .user_card .card_topic {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+}
+body main .user_card_section .user_card .card_para {
+  text-align: center;
+  padding-block: 2rem;
+}
+body main .user_card_section .user_card .card_links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+body main .user_card_section .user_card .card_links * {
+  transition: 0.1s ease-in;
+}
+body main .user_card_section .user_card .card_links a {
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 0.2em solid var(--body-default-fg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .user_card_section .user_card .card_links a:hover {
+  border-color: var(--site-effective-color);
+}
+body main .user_card_section .user_card .card_links a:hover svg {
+  fill: var(--site-effective-color);
+}
+body main .user_card_section .user_card .card_button {
+  width: 100%;
+  margin-top: 2rem;
+}
+body main .user_card_section .user_card .card_button a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  gap: 1rem;
+  font-size: 1.2rem;
+  padding: 1.3rem;
+  color: var(--user-card-button-fg);
+  background-color: var(--site-effective-color);
+  border: 0.2em solid var(--site-effective-color);
+  border-radius: var(--site-effective-border-radius);
+}
+body main .user_card_section .user_card .card_button a svg {
+  width: 1.4rem;
+}
+body main .user_card_section .user_card .card_button a svg * {
+  color: var(--user-card-button-fg);
+}
+body main .user_card_section .user_card .card_button a:hover {
+  color: var(--site-effective-color);
+  border-color: var(--site-effective-color);
+  background-color: transparent;
+  font-weight: 500;
+}
+body main .user_card_section .user_card .card_button a:hover svg * {
+  stroke-width: 0.15rem;
+  color: var(--site-effective-color);
+}
+body main .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+body main .container .ui_container {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+}
+body main .container .ui_container .container_header {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--container-header-font-size);
+  padding: 0.6em 1rem;
+  margin-top: 1.5rem;
+  border: 0.08em solid #fff;
+  border-radius: var(--site-effective-border-radius);
+}
+body main .container .ui_container .container_header svg {
+  width: var(--container-header-font-size);
+  height: var(--container-header-font-size);
+}
+body main .container .ui_container .container_header svg * {
+  font-size: var(--container-header-font-size);
+  color: #fff;
+}
+body main .container .ui_container .container_header_text_custom {
+  font-size: var(--body--larger-font-size);
+  color: #fff;
+  white-space: normal;
+  font-weight: 300;
+  margin-block: 1.8rem;
+}
+body main .container .ui_container .container_header_text_custom .modified_text {
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--site-effective-color);
+}
+body main .container .ui_container .container_header_text {
+  font-size: calc(var(--body--larger-font-size) - 1rem);
+  margin-bottom: 0rem;
+}
+body main .container .ui_container .container_header_2 {
+  color: #fff;
+  font-weight: 200;
+  font-size: calc(var(--body--larger-font-size) - 1.5rem);
+}
+body main .container .ui_container .container_description {
+  width: 90%;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  margin-block: 1.8rem;
+}
+body main .container .ui_container .container_advanta_box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 1.2rem;
+}
+body main .container .ui_container .container_advanta_box .advanta_box {
+  max-width: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main .container .ui_container .container_advanta_box .advanta_box .advanta_header {
+  color: var(--site-effective-color);
+  font-size: var(--body--larger-font-size);
+  font-weight: 300;
+}
+body main .container .ui_container .container_advanta_box .advanta_box .advanta_description {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+body main .container .ui_container .experience_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin: 2rem 0.5rem;
+  border-left: 0.085rem solid var(--body-default-fg);
+}
+body main .container .ui_container .experience_container .experience_box {
+  width: 100%;
+  position: relative;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main .container .ui_container .experience_container .experience_box .experience_period {
+  white-space: nowrap;
+  padding-bottom: 1rem;
+}
+body main .container .ui_container .experience_container .experience_box .experience_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.6rem;
+}
+body main .container .ui_container .experience_container .experience_box .experience_details .experience_header {
+  color: #fff;
+  padding-block: 0.4rem;
+  font-size: calc(var(--body--larger-font-size) - 2rem);
+}
+body main .container .ui_container .experience_container .experience_box .experience_details .experience_description {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+body main .container .ui_container .experience_container .experience_box .experience_box_representer {
+  position: absolute;
+  top: 0;
+  left: -0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: var(--site-effective-border-radius);
+  background: var(--body-default-fg);
+}
+body main .container .ui_container .experience_container .experience_box:hover .experience_period {
+  color: var(--site-effective-color);
+}
+body main .container .ui_container .experience_container .experience_box:hover .experience_box_representer {
+  background-color: var(--site-effective-color);
+}
+body main .container .ui_container .services_box_set {
+  width: 100%;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+body main .container .ui_container .services_box_set .services_box {
+  position: relative;
+  width: auto;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem;
+  border: 0.085rem solid var(--body-default-fg);
+  border-radius: var(--site-effective-border-radius);
+}
+body main .container .ui_container .services_box_set .services_box .services_box_header {
+  color: #fff;
+  padding-bottom: 0.85rem;
+  font-size: calc(var(--body--larger-font-size) - 1.7rem);
+}
+body main .container .ui_container .services_box_set .services_box .services_box_icon {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+}
+body main .container .ui_container .services_box_set .services_box .services_box_icon svg {
+  width: 2rem;
+  height: auto;
+}
+body main .container .ui_container .services_box_set .services_box .services_box_icon svg * {
+  color: var(--site-effective-color);
+}
+body main .container .ui_container .services_box_set .services_box .services_box_description {
+  width: 80%;
+  font-size: 1.15rem;
+  padding-bottom: 1.5rem;
+}
+body main .container .ui_container .services_box_set .services_box .services_count_projects {
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
+body main .container .ui_container .services_box_set .services_box:hover {
+  border-color: var(--site-effective-color);
+}
+body main .container .ui_container .services_box_set .services_box:hover .services_count_projects {
+  text-decoration: underline;
+}
+body main .container .ui_container .skills_box_set {
+  width: 100%;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+body main .container .ui_container .skills_box_set .skills_box {
+  width: 8rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+body main .container .ui_container .skills_box_set .skills_box .skill_set {
+  width: 100%;
+  height: 100%;
+  border: 0.1rem solid var(--body-default-fg);
+  border-radius: calc(2 * var(--site-effective-border-radius));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+body main .container .ui_container .skills_box_set .skills_box .skill_set .skill_image {
+  width: 100%;
+  max-width: 4rem;
+  max-height: 4rem;
+}
+body main .container .ui_container .skills_box_set .skills_box .skill_set .skill_image img {
+  width: 100%;
+  height: 100%;
+}
+body main .container .ui_container .skills_box_set .skills_box .skill_set .skill_box_header {
+  color: var(--site-effective-color);
+  font-size: calc(var(--body--larger-font-size) - 1rem);
+}
+body main .container .ui_container .skills_box_set .skills_box .skill_name {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+body main .container .ui_container .skills_box_set .skills_box:hover .skill_set {
+  border-color: var(--site-effective-color);
+}
+body main .container .ui_container .projects_box_set {
+  width: 100%;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+body main .container .ui_container .projects_box_set .project_box {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+body main .container .ui_container .projects_box_set .project_box .project_set {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0.15rem solid var(--body-default-fg);
+  border-radius: var(--site-effective-border-radius);
+}
+body main .container .ui_container .projects_box_set .project_box .project_set .project_image {
+  width: 100%;
+}
+body main .container .ui_container .projects_box_set .project_box .project_set .project_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main .container .ui_container .projects_box_set .project_box .project_set .project_box_header {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+body main .container .ui_container .projects_box_set .project_box .project_set .project_box_header .project_chip {
+  color: #000;
+  font-weight: 500;
+  font-size: 0.7rem;
+  background-color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--site-effective-border-radius);
+}
+body main .container .ui_container .projects_box_set .project_box .project_set .project_box_header .dark_chip {
+  color: #fff;
+  background-color: #000;
+}
+body main .container .ui_container .projects_box_set .project_box .project_name {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+body main .container .ui_container .projects_box_set .project_box .project_linker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--site-effective-border-radius);
+}
+body main .container .ui_container .projects_box_set .project_box:hover .project_set {
+  border-color: var(--site-effective-color);
+}
+body main .container .ui_container .projects_box_set .project_box:hover .project_name {
+  text-decoration: underline;
+}
+body main .container .ui_container .contact_form {
+  padding-block: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+body main .container .ui_container .contact_form .input_set {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body main .container .ui_container .contact_form .input_set label {
+  color: #fff;
+}
+body main .container .ui_container .contact_form .input_set label span {
+  color: #f00;
+}
+body main .container .ui_container .contact_form .input_set input,
+body main .container .ui_container .contact_form .input_set textarea {
+  border: 0;
+  outline: 0;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: #fff;
+  resize: vertical;
+}
+body main .container .ui_container .contact_form .submit_button {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+body main .container .ui_container .contact_form .submit_button button {
+  outline: none;
+  width: 50%;
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 0.7em 1rem;
+  color: var(--user-card-button-fg);
+  background-color: var(--site-effective-color);
+  border: 0.2em solid var(--site-effective-color);
+  border-radius: var(--site-effective-border-radius);
+}
+body main .container .ui_container .contact_form .submit_button button:hover {
+  color: var(--site-effective-color);
+  border-color: var(--site-effective-color);
+  background-color: transparent;
+  font-weight: 500;
+}
+
+@media (max-width: 2100px) {
+  :root {
+    font-size: 21px;
+  }
+}
+@media (max-width: 2000px) {
+  :root {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1900px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1550px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1305px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1170px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  body main {
+    flex-direction: column;
+  }
+  body main .user_card_section {
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    padding: 1.5em 0;
+  }
+  body main .user_card_section .user_card {
+    max-width: 45rem;
+  }
+}
+@media (max-width: 670px) {
+  :root {
+    font-size: 12px;
+  }
+  body main .user_card_section {
+    padding: 2rem;
+  }
+}
+@media (max-width: 520px) {
+  :root {
+    font-size: 10px;
+  }
+  body main .user_card_section {
+    padding: 0.5rem;
+  }
+  body main .container {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 350px) {
+  :root {
+    font-size: 8px;
+  }
+  body main .user_card_section {
+    padding: 0.5rem;
+  }
+  body main .container {
+    padding: 0.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
