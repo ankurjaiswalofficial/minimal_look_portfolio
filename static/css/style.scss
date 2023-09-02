@@ -84,6 +84,7 @@ body {
                             white-space: nowrap;
                             color: #fff;
                             font-weight: 300;
+                            font-size: 1rem;
                         }
                     }
                 }
@@ -111,6 +112,7 @@ body {
                 .card_para {
                     text-align: center;
                     padding-block: 2rem;
+                    font-size: 1.2rem;
                 }
                 .card_links {
                     width: 100%;
@@ -126,11 +128,15 @@ body {
                     a {
                         width: 3.6rem;
                         height: 3.6rem;
-                        border: 0.2em solid var(--body-default-fg);
+                        border: 0.2rem solid var(--body-default-fg);
                         border-radius: 50%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        svg{
+                            width: 1.4rem;
+                            height: 1.4rem;
+                        }
                     }
                     a:hover {
                         border-color: var(--site-effective-color);
@@ -154,7 +160,7 @@ body {
                         vertical-align: middle;
                         gap: 1rem;
                         font-size: 1.2rem;
-                        padding: 1.3rem;
+                        padding: 0.3rem;
                         color: var(--user-card-button-fg);
                         background-color: var(--site-effective-color);
                         border: 0.2em solid var(--site-effective-color);
@@ -583,6 +589,36 @@ body {
         }
     }
 }
+@media (max-width: 4000px) {
+    :root {
+        font-size: 30px;
+    }
+}
+@media (max-width: 3600px) {
+    :root {
+        font-size: 30px;
+    }
+}
+@media (max-width: 3200px) {
+    :root {
+        font-size: 28px;
+    }
+}
+@media (max-width: 2900px) {
+    :root {
+        font-size: 26px;
+    }
+}
+@media (max-width: 2600px) {
+    :root {
+        font-size: 24px;
+    }
+}
+@media (max-width: 2300px) {
+    :root {
+        font-size: 22px;
+    }
+}
 @media (max-width: 2100px) {
     :root {
         font-size: 21px;
@@ -610,7 +646,7 @@ body {
 }
 @media (max-width: 1170px) {
     :root {
-        font-size: 14px;
+        font-size: 8px;
     }
 }
 
@@ -660,6 +696,21 @@ body {
 @media (max-width: 350px) {
     :root{
         font-size: 8px;
+    }
+    body {
+        main {
+            .user_card_section {
+                padding: 0.5rem;
+            }
+            .container{
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+@media (max-width: 300px) {
+    :root{
+        font-size: 6px;
     }
     body {
         main {
