@@ -4,6 +4,7 @@
     --body-bg: rgb(31, 31, 31);
     --body-default-fg: #999999;
     --body--larger-font-size: 3.3rem;
+    --efficient-white: #fff;
     --user-card-button-fg: #000;
     --site-effective-color: #28e98c;
     --site-effective-border-radius: 2rem;
@@ -71,7 +72,7 @@ body {
                             width: 8rem;
                             height: auto;
                             * {
-                                fill: #fff;
+                                fill: var(--efficient-white);
                             }
                         }
                     }
@@ -82,7 +83,7 @@ body {
                         align-items: flex-end;
                         span {
                             white-space: nowrap;
-                            color: #fff;
+                            color: var(--efficient-white);
                             font-weight: 300;
                             font-size: 1rem;
                         }
@@ -107,7 +108,7 @@ body {
                     font-weight: 300;
                     text-align: center;
                     line-height: 1.5;
-                    color: #fff;
+                    color: var(--efficient-white);
                 }
                 .card_para {
                     text-align: center;
@@ -201,7 +202,7 @@ body {
                 align-items: flex-start;
                 padding: 1rem;
                 .container_header {
-                    color: #fff;
+                    color: var(--efficient-white);
                     text-align: center;
                     display: flex;
                     flex-direction: row;
@@ -211,20 +212,20 @@ body {
                     font-size: var(--container-header-font-size);
                     padding: 0.6em 1rem;
                     margin-top: 1.5rem;
-                    border: 0.08em solid #fff;
+                    border: 0.08em solid var(--efficient-white);
                     border-radius: var(--site-effective-border-radius);
                     svg {
                         width: var(--container-header-font-size);
                         height: var(--container-header-font-size);
                         * {
                             font-size: var(--container-header-font-size);
-                            color: #fff;
+                            color: var(--efficient-white);
                         }
                     }
                 }
                 .container_header_text_custom {
                     font-size: var(--body--larger-font-size);
-                    color: #fff;
+                    color: var(--efficient-white);
                     white-space: normal;
                     font-weight: 300;
                     margin-block: 1.8rem;
@@ -239,7 +240,7 @@ body {
                     margin-bottom: 0rem;
                 }
                 .container_header_2 {
-                    color: #fff;
+                    color: var(--efficient-white);
                     font-weight: 200;
                     font-size: calc(var(--body--larger-font-size) - 1.5rem);
                 }
@@ -303,7 +304,7 @@ body {
                             align-items: flex-start;
                             padding: 0.6rem;
                             .experience_header {
-                                color: #fff;
+                                color: var(--efficient-white);
                                 padding-block: 0.4rem;
                                 font-size: calc(
                                     var(--body--larger-font-size) - 2rem
@@ -354,7 +355,7 @@ body {
                         border: 0.085rem solid var(--body-default-fg);
                         border-radius: var(--site-effective-border-radius);
                         .services_box_header {
-                            color: #fff;
+                            color: var(--efficient-white);
                             padding-bottom: 0.85rem;
                             font-size: calc(
                                 var(--body--larger-font-size) - 1.7rem
@@ -379,7 +380,7 @@ body {
                         }
                         .services_count_projects {
                             font-weight: 500;
-                            color: #fff;
+                            color: var(--efficient-white);
                             font-size: 1.05rem;
                             text-transform: uppercase;
                         }
@@ -438,7 +439,7 @@ body {
                             }
                         }
                         .skill_name {
-                            color: #fff;
+                            color: var(--efficient-white);
                             font-size: 1.2rem;
                             font-weight: 500;
                         }
@@ -496,20 +497,20 @@ body {
                                     color: #000;
                                     font-weight: 500;
                                     font-size: 0.7rem;
-                                    background-color: #fff;
+                                    background-color: var(--efficient-white);
                                     padding: 0.5rem 1.2rem;
                                     border-radius: var(
                                         --site-effective-border-radius
                                     );
                                 }
                                 .dark_chip {
-                                    color: #fff;
+                                    color: var(--efficient-white);
                                     background-color: #000;
                                 }
                             }
                         }
                         .project_name {
-                            color: #fff;
+                            color: var(--efficient-white);
                             font-size: 1.2rem;
                             font-weight: 500;
                         }
@@ -546,7 +547,7 @@ body {
                         flex-direction: column;
                         gap: 0.5rem;
                         label {
-                            color: #fff;
+                            color: var(--efficient-white);
                             span {
                                 color: #f00;
                             }
@@ -558,7 +559,7 @@ body {
                             padding: 0.2rem;
                             font-size: 1.2rem;
                             background-color: transparent;
-                            color: #fff;
+                            color: var(--efficient-white);
                             resize: vertical;
                         }
                     }
