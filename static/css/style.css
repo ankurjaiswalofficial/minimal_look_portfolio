@@ -8,6 +8,7 @@
   --site-effective-color: #fa0;
   --site-effective-border-radius: 2rem;
   --container-header-font-size: 0.85rem;
+  --backdrop-bg: #0000007e;
   font-size: 20px;
 }
 
@@ -24,6 +25,8 @@
 body {
   width: 100%;
   background: var(--body-bg);
+  position: relative;
+  overflow: hidden;
 }
 body a {
   text-decoration: none;
@@ -572,6 +575,148 @@ body main .container .ui_container .contact_form .submit_button button:hover {
   border-color: var(--site-effective-color);
   background-color: transparent;
   font-weight: 500;
+}
+body .navigation_backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  display: none;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: var(--backdrop-bg);
+}
+body .navigation_backdrop .backdrop_handler {
+  width: 100%;
+  height: 100%;
+}
+body .navigation_backdrop .navigation_bar {
+  width: 40rem;
+  height: 100%;
+  background-color: var(--body-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 6rem;
+}
+body .navigation_backdrop .navigation_bar .navigation_header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body .navigation_backdrop .navigation_bar .navigation_header .navigation_header_text {
+  font-size: 2rem;
+}
+body .navigation_backdrop .navigation_bar .navigation_header .navigation_bar_hidder {
+  border: 0.1rem solid var(--body-default-fg);
+  border-radius: var(--site-effective-border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .navigation_backdrop .navigation_bar .navigation_header .navigation_bar_hidder svg {
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+}
+body .navigation_backdrop .navigation_bar .navigation_header .navigation_bar_hidder:hover {
+  border-color: var(--site-effective-color);
+}
+body .navigation_backdrop .navigation_bar .navigation_header .navigation_bar_hidder:hover svg * {
+  color: var(--site-effective-color);
+}
+body .navigation_backdrop .navigation_bar .navigation_links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+  overflow-y: auto;
+}
+body .navigation_backdrop .navigation_bar .navigation_links .container_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+body .navigation_backdrop .navigation_bar .navigation_links .container_header svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+body .navigation_backdrop .navigation_bar .nav_link:hover .container_header,
+body .navigation_backdrop .navigation_bar .active_nav_link .container_header {
+  color: var(--efficient-white);
+}
+body .navigation_backdrop .navigation_bar .nav_link:hover .container_header svg *,
+body .navigation_backdrop .navigation_bar .active_nav_link .container_header svg * {
+  color: var(--site-effective-color);
+}
+body .navigation_backdrop .navigation_bar .color_patches {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body .navigation_backdrop .navigation_bar .color_patches .color_patch {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: var(--site-effective-border-radius);
+}
+body .navigation_backdrop .navigation_bar .color_patches .red_patch {
+  background-color: rgb(146, 5, 5);
+}
+body .navigation_backdrop .navigation_bar .color_patches .yellow_patch {
+  background-color: rgb(255, 170, 0);
+}
+body .navigation_backdrop .navigation_bar .color_patches .green_patch {
+  background-color: rgb(20, 155, 20);
+}
+body .navigation_backdrop .navigation_bar .color_patches .blue_patch {
+  background-color: rgb(11, 11, 158);
+}
+body .navigation_backdrop .navigation_bar .color_patches .purple_patch {
+  background-color: rgb(101, 5, 101);
+}
+body .d_flex {
+  display: flex;
+}
+body .navigation_bar_handler {
+  width: 4.2rem;
+  height: 4.2rem;
+  position: fixed;
+  right: 2.5rem;
+  top: 6rem;
+  padding: 0.8rem;
+  border: 0.14rem solid var(--efficient-white);
+  border-radius: var(--site-effective-border-radius);
+  background-color: var(--body-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+body .navigation_bar_handler svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+body .navigation_bar_handler svg * {
+  color: var(--efficient-white);
+}
+body .navigation_bar_handler:hover {
+  border-color: var(--site-effective-color);
+}
+body .navigation_bar_handler:hover svg * {
+  color: var(--site-effective-color);
 }
 
 @media (max-width: 4000px) {
