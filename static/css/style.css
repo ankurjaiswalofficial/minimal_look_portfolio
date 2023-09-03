@@ -26,6 +26,8 @@ body {
   width: 100%;
   background: var(--body-bg);
   position: relative;
+}
+body .overflow_me {
   overflow: hidden;
 }
 body a {
