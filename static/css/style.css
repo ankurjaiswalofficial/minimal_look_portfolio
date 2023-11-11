@@ -117,6 +117,12 @@ body main .user_card_section .user_card .card_topic {
   line-height: 1.5;
   color: var(--efficient-white);
 }
+body main .user_card_section .user_card .card_topic h4 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--efficient-white);
+}
 body main .user_card_section .user_card .card_para {
   text-align: center;
   padding-block: 2rem;
@@ -399,7 +405,7 @@ body main .container .ui_container .skills_box_set {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
   gap: 1.2rem;
 }
@@ -475,6 +481,7 @@ body main .container .ui_container .projects_box_set .project_box .project_set {
 }
 body main .container .ui_container .projects_box_set .project_box .project_set .project_image {
   width: 100%;
+  display: flex;
 }
 body main .container .ui_container .projects_box_set .project_box .project_set .project_image img {
   width: 100%;
