@@ -4,6 +4,6 @@
 
 ## Site Sample Look
 
-![Site Card Glimp](static/img/site_glimp_1.png){: width="100%" height="auto"}
+![Site Card Glimp](static/img/site_glimp_1.png)
 
-![Site Glimp](static/img/site_glimp.png){: width="100%" height="auto"}
+![Site Glimp](static/img/site_glimp.png)
