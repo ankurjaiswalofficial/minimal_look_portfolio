@@ -32,3 +32,15 @@ function color_handler() {
     };
 }
 color_handler()
+
+function sendMail() {
+    const name = document.getElementById('name').value;
+    const phNo = document.getElementById('ph_no').value;
+    const email = document.getElementById('email').value;
+    const budget = document.getElementById('budget').value;
+    const message = document.getElementById('message').value;
+
+    const mailtoLink = `mailto:ankurjaiswalofficial@gmail.com?subject=Portfolio-Contact-Form-Message%20from%20${name}%20-%20${phNo}&body=Name:%20${name}%0D%0APhone%20Number:%20${phNo}%0D%0AEmail:%20${email}%0D%0ABudget:%20${budget}%0D%0AMessage:%20${message}`;
+
+    window.location.href = mailtoLink;
+}
