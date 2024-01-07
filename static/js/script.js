@@ -1,3 +1,12 @@
+window.addEventListener("scroll", function () {
+    var topBtn = document.querySelector('#move-to-top-btn');
+    if (window.scrollY > 200) {
+        topBtn.classList.add('active');
+    } else {
+        topBtn.classList.remove('active');
+    }
+});
+
 function menu_handler() {
     let nav_backdrop = document.getElementsByClassName(
         "navigation_backdrop"
@@ -33,14 +42,58 @@ function color_handler() {
 }
 color_handler()
 
-function sendMail() {
+function validateAndSend() {
     const name = document.getElementById('name').value;
-    const phNo = document.getElementById('ph_no').value;
     const email = document.getElementById('email').value;
     const budget = document.getElementById('budget').value;
     const message = document.getElementById('message').value;
 
-    const mailtoLink = `mailto:ankurjaiswalofficial@gmail.com?subject=Portfolio-Contact-Form-Message%20from%20${name}%20-%20${phNo}&body=Name:%20${name}%0D%0APhone%20Number:%20${phNo}%0D%0AEmail:%20${email}%0D%0ABudget:%20${budget}%0D%0AMessage:%20${message}`;
+    if (name === '' || email === '' || budget === '' || message === '') {
+        alert('Please fill in all required fields.');
+    } else {
+        const phNo = document.getElementById('ph_no').value || 'Not Provided';
 
-    window.location.href = mailtoLink;
+        const mailtoLink = `mailto:recipient@example.com?subject=Portfolio Contact Message%20from%20${name}%20-%20${phNo}&body=Name:%20${name}%0D%0APhone%20Number:%20${phNo}%0D%0AEmail:%20${email}%0D%0ABudget:%20${budget}%0D%0AMessage:%20${message}`;
+
+        window.location.href = mailtoLink;
+    }
 }
+
+function goToTop() {
+    var gotopBtn = document.querySelector('#move-to-top');
+    var topBtn = document.querySelector('#move-to-top-btn');
+    
+    topBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        scrollToTop(800);
+    });
+};
+
+function scrollToTop(duration) {
+    const initialY = window.scrollY;
+    const yOffset = -initialY;
+    const start = performance.now();
+
+    const animateScroll = function(currentTime) {
+        const elapsed = currentTime - start;
+        const scroll = easeInOut(elapsed, initialY, yOffset, duration);
+        window.scrollTo(0, scroll);
+
+        if (elapsed < duration) {
+            requestAnimationFrame(animateScroll);
+        } else {
+            window.scrollTo(0, 0);
+        }
+    };
+
+    requestAnimationFrame(animateScroll);
+}
+
+function easeInOut(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+}
+goToTop();
+

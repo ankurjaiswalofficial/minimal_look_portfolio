@@ -580,6 +580,7 @@ body {
                         margin-top: 2rem;
                         margin-bottom: 3rem;
                         button {
+                            cursor: pointer;
                             outline: none;
                             width: 50%;
                             height: 100%;
@@ -750,7 +751,31 @@ body {
             }
         }
     }
+    .active{
+        display: block !important;
+    }
+    .gototop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 10;
+        display: none;
+        a {
+            background-color: #000000e7;
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            i {
+                font-size: 10px;
+            }
+        }
+    }
 }
+
 @media (max-width: 4000px) {
     :root {
         font-size: 30px;

@@ -569,6 +569,7 @@ body main .container .ui_container .contact_form .submit_button {
   margin-bottom: 3rem;
 }
 body main .container .ui_container .contact_form .submit_button button {
+  cursor: pointer;
   outline: none;
   width: 50%;
   height: 100%;
@@ -726,6 +727,29 @@ body .navigation_bar_handler:hover {
 }
 body .navigation_bar_handler:hover svg * {
   color: var(--site-effective-color);
+}
+body .active {
+  display: block !important;
+}
+body .gototop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 10;
+  display: none;
+}
+body .gototop a {
+  background-color: rgba(0, 0, 0, 0.9058823529);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+body .gototop a i {
+  font-size: 10px;
 }
 
 @media (max-width: 4000px) {
